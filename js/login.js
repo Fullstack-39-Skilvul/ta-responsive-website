@@ -19,6 +19,26 @@ button.addEventListener('click', function (event) {
     let emailValue = email.value
     let passwordValue = password.value
 
+    if (emailValue === '' || passwordValue === '') {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'error',
+            title: 'Please enter your email and password'
+          })
+      return
+    }
+
     getData()
     .then((data) => {
       const user = data.find((user) => {
@@ -33,4 +53,6 @@ button.addEventListener('click', function (event) {
 
     return(emailValue, passwordValue)
 })
+
+
 
