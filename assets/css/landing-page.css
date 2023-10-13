@@ -1,5 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700&display=swap");
 
 body {
-  font-family: "Geologica", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Geologica", sans-serif !important;
+}
+nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  border-bottom: 1px solid rgb(233, 232, 232) !important;
+}
+footer {
+  margin-top: 100px;
+  background-color: #dfeff9;
+}
+
+.active {
+  color: #2993d5 !important;
+}
+.hero {
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+.text-hero h1 {
+  color: #2993d5;
+}
+
+.text-hero p {
+  color: #575656;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+.about p {
+  color: #575656;
+}
+
+.card-about .card {
+  background-color: #eff9fb;
+}
+
+.title-about {
+  color: #2993d5;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.bottom-footer {
+  background-color: #2993d5;
+  color: #fff;
+  text-align: center;
+  margin-bottom: -25px;
+}
+
+.title-footer {
+  color: #2993d5;
+  font-style: bold;
+}
+
+.img-footer {
+  margin-left: -30px;
+}
+
+.footer-features {
+  padding-left: 100px !important;
+}
+.footer-features ul {
+  list-style-type: none;
+  margin-left: -31px;
+}
+
+.footer-features a {
+  text-decoration: none;
+  color: #575656;
+}
+
+.footer-contact p {
 }
