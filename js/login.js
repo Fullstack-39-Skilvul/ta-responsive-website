@@ -61,6 +61,8 @@ button.addEventListener('click', function (event) {
           icon: 'success',
           title: 'Login successfully'
         })
+
+        localStorage.setItem('user', JSON.stringify(user))
       } else {
         const Toast = Swal.mixin({
           toast: true,
