@@ -17,6 +17,14 @@ footer {
   background-color: #dfeff9;
 }
 
+.max-width {
+  max-width: 100%;
+}
+
+.bg-blue-sky {
+  background-color: #eff9fb;
+}
+
 .active {
   color: #2993d5 !important;
 }
@@ -36,13 +44,67 @@ footer {
   width: 100%;
   height: auto;
 }
-
+.about {
+  font-size: 15px;
+}
 .about p {
   color: #575656;
+  font-size: 1em;
 }
 
+.about img {
+  max-width: 100%;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  gap: 20px;
+}
+.slider::-webkit-scrollbar {
+  background-color: rgb(232, 224, 224);
+  height: 5px;
+}
+.slider::-webkit-scrollbar-corner {
+  background-color: #dfeff9;
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: #2993d5;
+}
+
+.card-konselor {
+  width: 300px;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid #c5c5c5;
+  margin-bottom: 20px;
+}
+.card-body {
+  width: 300px;
+  margin: 25px;
+}
 .card-about .card {
   background-color: #eff9fb;
+  font-size: 15px;
+}
+
+.card > p {
+  font-size: 1em;
+  padding: 0 10px;
+  color: #575656;
+}
+.try-consuling-section {
+  font-size: 15px;
+}
+.title-try-conseling {
+  font-size: 1.7em;
+  color: #2993d5;
+}
+.try-consuling-section p {
+  color: #575656;
+  line-height: 25px;
+  font-size: 1em;
+  margin-bottom: 30px;
 }
 
 .title-about {
@@ -51,34 +113,41 @@ footer {
   margin-top: 20px;
 }
 
+.konselor-section p {
+  color: #575656;
+}
+
+.title-konselor {
+  color: #2993d5;
+}
+
+.icon-section {
+  margin-top: 10px;
+  width: 80px;
+}
+.icon-konselor {
+  width: 60px;
+  background-color: #dfeff9;
+  padding: 20px;
+  height: 60px;
+  border-radius: 100%;
+  margin-bottom: 5px;
+}
+
 .bottom-footer {
   background-color: #2993d5;
   color: #fff;
   text-align: center;
   margin-bottom: -25px;
 }
-
-.title-footer {
-  color: #2993d5;
-  font-style: bold;
-}
-
-.img-footer {
-  margin-left: -30px;
-}
-
-.footer-features {
-  padding-left: 100px !important;
-}
-.footer-features ul {
-  list-style-type: none;
-  margin-left: -31px;
-}
-
-.footer-features a {
-  text-decoration: none;
+.footer p {
   color: #575656;
 }
+.title-footer {
+  color: #2993d5;
+}
 
-.footer-contact p {
+.feature-footer a {
+  text-decoration: none;
+  color: #575656;
 }
