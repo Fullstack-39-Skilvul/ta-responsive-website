@@ -1,38 +1,33 @@
-let konselorFromPromise = [];
-fetch('https://cors-anywhere.herokuapp.com/https://mockapi.io/projects/6525469867cfb1e59ce6ff4a')
-  .then((res) => {
-    console.log(res);
-    return res.json();
-  })
-  .then((res) => {
-    console.log(res);
-    konselorFromPromise = [...res];
-    console.log(konselorFromPromise);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-let listKonselor = document.getElementById('list-konselor');
+let slideContent = document.getElementById("slider-content");
 
 async function getDataKonselor() {
   try {
-    let respons = await fetch('https://cors-anywhere.herokuapp.com/https://mockapi.io/projects/6525469867cfb1e59ce6ff4a');
-    let konselor = await respons.json().filter((item) => item.role === 'konselor');
+    let response = await fetch(
+      "https://6525469867cfb1e59ce6ff49.mockapi.io/konselor"
+    );
+    let konselor = await response.json();
 
-    console.log(konselors);
+    if (!konselor || !Array.isArray(konselor)) {
+      console.error("Data konselor tidak valid atau tidak ada.");
+      return;
+    }
 
-    konselors.map((item, index) => {
-      let cardKonselor = `
-        <div>
-          <img src=${item.imageUrl} alt="..." width="200" />
-          <h3>${item.name}</h3>
+    console.log(konselor);
+    konselor.forEach((item) => {
+      const card = `
+        <div class="card-konselor">
+        <img src="${item.avatar}" class="card-img-top" alt="..." style="width:350px">
+          <div class="card-body">
+            <h5 class="card-title fs-6">${item.name}</h5>
+            <p class="card-text">${item.spesialis}</p>
+            <button class="card-btn">Booking</button>
+          </div>
         </div>
       `;
-      listKonselor.innerHTML += cardKonselor;
+      slideContent.innerHTML += card;
     });
   } catch (error) {
-    console.log(error);
+    console.error("Terjadi kesalahan:", error);
   }
 }
 
