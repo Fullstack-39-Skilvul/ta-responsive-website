@@ -6,6 +6,57 @@ body {
   flex-direction: column;
 }
 
+.slider {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  width: 100%;
+  gap: 20px;
+}
+
+.slider::-webkit-scrollbar {
+  background-color: rgb(232, 224, 224);
+  height: 5px;
+}
+
+.slider::-webkit-scrollbar-corner {
+  background-color: #dfeff9;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background-color: #2993d5;
+}
+
+#slider-content {
+  margin-right: 500px;
+}
+
+.card-title {
+  padding: 15px 0px 5px 0px;
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card-btn {
+  border-radius: 5px;
+  border: none;
+  background: #2993d5;
+  color: #dfeff9;
+  padding: 7px 30px 7px 30px;
+  margin: 10px 0px 10px 110px;
+}
+
+.card-body {
+  box-shadow: 0 2px 10px 0px #529dcb;
+}
+
+.card-img-top {
+  box-shadow: 0 2px 10px 0px #529dcb;
+}
+
 .title {
   text-align: center;
   padding: 40px 0px 20px 0px;
