@@ -18,8 +18,8 @@ async function getDataKonselor() {
         <div class="card-konselor">
         <img src="${item.avatar}" class="card-img-top" alt="..." style="width:350px">
           <div class="card-body">
-            <h5 class="card-title fs-6">${item.name}</h5>
-            <p class="card-text">${item.spesialis}</p>
+            <h5 class="card-title fs-6" id="name">${item.name}</h5>
+            <p class="card-text" id="spesialis">${item.spesialis}</p>
             <button class="card-btn">Booking</button>
           </div>
         </div>
