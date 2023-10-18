@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konselor Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/konselor.css" />
+  <script src="../js/konselor.js" defer></script>
+</head>
+
+<body>
+  <div class="title">
+    <h1 style="color: #2993d5" class="h1">Mau Pilih Paket Konseling Mana?</h1>
+    <p class="p">Temukan Paket Konseling yang Tepat untuk Mendukung Kesehatan Mental dan Kesejahteraan Anda</p>
+  </div>
+
+  <!-- SLIDER -->
+  <div class="slider" id="slider-content">
+    <!-- slide konselor -->
+
+
+  </div>
+  <!-- AKHIR SLIDER -->
+
+
+
+  <div class="title">
+    <h3 style="color: #2993d5 h" class="h3">Jadwalkan Sesi Konsultasi Online</h3>
+    <p class="p">Temukan Solusi Masalahmu Dengan Cepat dan Mudah</p>
+  </div>
+
+  <!-- FITUR BOOKING-->
+  <form action="" class="mx-auto">
+    <!-- pilih konselor -->
+    <div class="container mx-0 mx-md-auto">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <div class="input-group col col-sm-9 p-3 rounded" >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon-name">Nama Konselor</span>
+            </div>
+            <input id="name" type="text" class="form-control" placeholder="Masukan Nama Konselor Anda" value=""
+              name="name" readonly />
+          </div>
+        </div>
+
+        <!-- jenis konseling -->
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <div class="input-group col col-sm-9 p-3 rounded" >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon-name">Jenis Konseling</span>
+                </div>
+                <input id="jenis" type="text" class="form-control" placeholder="Masukan Jenis Konseling Anda" value=""
+                  name="name" readonly />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-center gap-0">
+            <div class="col-4 pt-0" id="khusus">
+              <div class="input-group col col-sm-9 p-3 rounded" >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon-name">Durasi</span>
+                </div>
+                <input id="name" type="text" class="form-control" value="45 Menit" name="name" readonly />
+              </div>
+            </div>
+            <div class="col-4 pt-0" id="khusus">
+              <div class="input-group col col-sm-9 p-3 rounded" >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon-name">Harga</span>
+                </div>
+                <input id="name" type="text" class="form-control" value="Rp 150.000,00" name="name" readonly />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- jadwal konseling -->
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-8 ">
+              <div class="input-group col col-sm-9 p-3 " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon-name">Jadwal Konseling</span>
+                </div>
+                <input id="name" type="date" class="form-control" name="name" required />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- button booking -->
+        <button type="submit" class="col-8 btn btn-form btn-primary py-2">Booking Now</button>
+      </div>
+    </div>
+  </form>
+  <!-- AKHIR FITUR BOOKING -->
+</body>
+
+</html>
