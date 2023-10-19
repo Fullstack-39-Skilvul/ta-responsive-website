@@ -6,17 +6,15 @@ let spesialisKonselor = document.getElementById("jenis");
 if (konselor) {
   namaKonselor.value = konselor.name;
   spesialisKonselor.value = konselor.spesialis;
-
 }
 
-function kirimKonselor (data) {
+function kirimKonselor(data) {
   console.log(data);
   localStorage.setItem("konselor", JSON.stringify(data));
   const konselor = JSON.parse(localStorage.getItem("konselor"));
   if (konselor) {
     namaKonselor.value = konselor.name;
     spesialisKonselor.value = konselor.spesialis;
-  
   }
 }
 
@@ -36,11 +34,17 @@ async function getDataKonselor() {
     konselor.map((item) => {
       const card = `
         <div class="card-konselor my-4">
-        <img src="${item.avatar}" class="card-img-top" alt="..." style="width:250px; height:200px" />
+        <img src="${
+          item.avatar
+        }" class="card-img-top" alt="..." style="width:250px; height:200px" />
           <div class="card-body" >
-              <h5 class="card-title fs-6 text-truncate" id="name">${item.name}</h5>
+              <h5 class="card-title fs-6 text-truncate" id="name">${
+                item.name
+              }</h5>
               <p class="card-text" id="spesialis">${item.spesialis}</p>
-              <button class="card-btn" onclick='kirimKonselor(${JSON.stringify(item)})'>Booking Now</button>
+              <button class="card-btn" onclick='kirimKonselor(${JSON.stringify(
+                item
+              )})'>Booking Now</button>
           </div>
         </div>
       `;
@@ -53,5 +57,36 @@ async function getDataKonselor() {
 
 getDataKonselor();
 
+const login = () => {
+  const isLogin = localStorage.getItem("login") === "true";
+  const user = JSON.parse(localStorage.getItem("user")); // Parse objek pengguna
+  const loginButton = document.getElementById("login-btn");
+  const userInfo = document.getElementById("user-info");
+  const userName = document.getElementById("user-name");
+  const userAvatar = document.getElementById("user-avatar");
 
+  if (isLogin) {
+    console.log("sudah login");
+    loginButton.classList.add("d-none");
+    userInfo.classList.remove("d-none");
+    userName.textContent = `${user.name}`;
+    userAvatar.setAttribute("src", user.avatar);
+  } else {
+    console.log("belum login");
+  }
+};
 
+login();
+
+const logoutButton = document.getElementById("logout-btn");
+
+logoutButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "/pages/login.html";
+
+  localStorage.clear();
+  const userInfo = document.getElementById("user-info");
+  userInfo.classList.add("d-none");
+  const loginButton = document.getElementById("loggin-btn");
+  loginButton.classList.remove("d-none");
+});

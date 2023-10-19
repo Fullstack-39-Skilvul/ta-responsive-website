@@ -49,14 +49,50 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Jenis Konseling</a>
+                <a class="nav-link" href="/pages/konselor.html"
+                  >Jenis Konseling</a
+                >
               </li>
             </ul>
-            <form class="d-flex gap-3" role="search">
+
+            <!-- AVATAR LOGIN -->
+            <div class="d-flex align-items-center">
+              <div
+                id="user-info"
+                class="d-none d-flex align-items-center gap-2"
+              >
+                <div>
+                  <img
+                    id="user-avatar"
+                    class="avatar"
+                    src=""
+                    alt="User Avatar"
+                    class="me-2"
+                    width="40px"
+                  />
+                </div>
+                <div class="d-flex flex-column justify-content-right">
+                  <span id="user-name"></span>
+                  <a
+                    class="text-decoration-none"
+                    href="/pages/login.html"
+                    id="logout-btn"
+                    >Logout</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- AVATAR LOGIN -->
+
+            <form id="login-btn" class="d-flex gap-3" role="search">
               <a href="#" class="btn btn-primary" type="submit"> Sign Up </a>
-              <button href="#" class="btn btn-outline-primary" type="submit">
+              <a
+                href="/pages/login.html"
+                class="btn btn-outline-primary"
+                type="submit"
+              >
                 Login
-              </button>
+              </a>
             </form>
           </div>
         </div>
@@ -76,7 +112,9 @@
               hubungi kami untuk mendapatkan panduan dan dukungan yang Anda
               butuhkan.
             </p>
-            <a class="btn bg-primary text-wrap text-light mt-5" href=""
+            <a
+              class="btn bg-primary text-wrap text-light mt-5"
+              href="#konseling"
               >Get Started
               <img src="/assets/img/TrendUp.svg" alt="TrendUp" width="20px"
             /></a>
@@ -177,7 +215,7 @@
       <!-- AKHIR ABOUT SECTION -->
 
       <!-- TRY CONSULING SECTION -->
-      <section>
+      <section id="konseling">
         <div class="container mt-5 try-consuling-section">
           <div
             class="row bg-blue-sky p-3 m-2 d-flex align-items-center justify-content-center"
@@ -213,8 +251,10 @@
                 kesejahteraan yang lebih besar. Temukan cahaya di sini, di
                 Mahasucita.
               </p>
-              <a class="btn bg-primary text-wrap text-light mt-2 fs-6" href=""
-                >Try Consuling
+              <a
+                class="btn bg-primary text-wrap text-light mt-2 fs-6"
+                href="/pages/konselor.html"
+                >Try Counseling
                 <img src="/assets/img/TrendUp.svg" alt="TrendUp" width="20px"
               /></a>
             </div>
