@@ -33,14 +33,10 @@ async function getDataKonselor() {
     console.log(konselor);
     konselor.map((item) => {
       const card = `
-        <div class="card-konselor my-4">
-        <img src="${
-          item.avatar
-        }" class="card-img-top" alt="..." style="width:250px; height:200px" />
+        <div class="card-konselor">
+        <img src="${item.avatar}" class="card-img-top" alt="..." />
           <div class="card-body" >
-              <h5 class="card-title fs-6 text-truncate" id="name">${
-                item.name
-              }</h5>
+              <h5 class="card-title text-truncate" id="name">${item.name}</h5>
               <p class="card-text" id="spesialis">${item.spesialis}</p>
               <button class="card-btn" onclick='kirimKonselor(${JSON.stringify(
                 item

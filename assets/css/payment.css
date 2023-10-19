@@ -17,9 +17,14 @@ nav {
 
 footer {
   font-weight: 500;
-
+  width: 100%;
   margin-top: 100px;
   background-color: #dfeff9;
+}
+
+.footer {
+  padding-left: 80px;
+  width: 100%;
 }
 .avatar {
   border-radius: 50%;

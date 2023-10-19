@@ -19,7 +19,7 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top pe-3">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/index.html">
             <img src="/assets/img/Manahsucita.png" alt="logo" width="200px" />
           </a>
           <button
@@ -93,26 +93,26 @@
     </header>
     <!-- AKHIR NAVBAR -->
     <main mt-5>
-      <div class="title pt-5">
-        <h1 style="color: #2993d5" class="h1">
+      <div class="title m-5 pt-5">
+        <h1 style="color: #2993d5" class="h1 mt-5">
           Mau Pilih Paket Konseling Mana?
         </h1>
         <p class="p">
           Temukan Paket Konseling yang Tepat untuk Mendukung Kesehatan Mental
-          dan Kesejahteraan Anda. Pilih konselormu di bawaih ini dan lakukan
-          booking segera !
+          dan Kesejahteraan Anda. <br />
+          Pilih konselormu di bawaih ini dan lakukan booking segera !
         </p>
       </div>
 
       <!-- SLIDER -->
-      <div class="container">
-        <div class="slider" id="slider-content">
+      <div class="container slider-container">
+        <div class="slider pb-5" id="slider-content">
           <!-- slide konselor -->
         </div>
       </div>
       <!-- AKHIR SLIDER -->
 
-      <div class="title">
+      <div class="m-4 title">
         <h3 style="color: #2993d5" class="h3">
           Jadwalkan Sesi Konsultasi Online
         </h3>
@@ -120,26 +120,28 @@
       </div>
 
       <!-- FITUR BOOKING-->
-      <form action="" class="mx-auto">
+      <form action="" class="form-input">
         <!-- pilih konselor -->
-        <div class="container mx-0 mx-md-auto">
+        <div class="mx-0 mx-md-auto">
           <div class="row justify-content-center">
             <div class="col-8">
-              <div class="input-group col col-sm-9 p-3 rounded">
+              <div class="input-group d-flex col col-sm-9 p-3 rounded">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon-name"
                     >Nama Konselor</span
                   >
                 </div>
-                <input
-                  id="name"
-                  type="text"
-                  class="form-control"
-                  placeholder="Masukan Nama Konselor Anda"
-                  value=""
-                  name="name"
-                  readonly
-                />
+                <div class="w-100">
+                  <input
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Masukan Nama Konselor Anda"
+                    value=""
+                    name="name"
+                    readonly
+                  />
+                </div>
               </div>
             </div>
 
@@ -153,15 +155,17 @@
                         >Jenis Konseling</span
                       >
                     </div>
-                    <input
-                      id="jenis"
-                      type="text"
-                      class="form-control"
-                      placeholder="Masukan Jenis Konseling Anda"
-                      value=""
-                      name="name"
-                      readonly
-                    />
+                    <div class="w-100">
+                      <input
+                        id="jenis"
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukan Jenis Konseling Anda"
+                        value=""
+                        name="name"
+                        readonly
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -176,14 +180,16 @@
                         >Durasi</span
                       >
                     </div>
-                    <input
-                      id="name"
-                      type="text"
-                      class="form-control"
-                      value="45 Menit"
-                      name="name"
-                      readonly
-                    />
+                    <div class="w-100">
+                      <input
+                        id="name"
+                        type="text"
+                        class="form-control"
+                        value="45 Menit"
+                        name="name"
+                        readonly
+                      />
+                    </div>
                   </div>
                 </div>
                 <div class="col-4 pt-0" id="khusus">
@@ -193,14 +199,16 @@
                         >Harga</span
                       >
                     </div>
-                    <input
-                      id="name"
-                      type="text"
-                      class="form-control"
-                      value="Rp 150.000,00"
-                      name="name"
-                      readonly
-                    />
+                    <div class="w-100">
+                      <input
+                        id="name"
+                        type="text"
+                        class="form-control"
+                        value="Rp 150.000,00"
+                        name="name"
+                        readonly
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -216,20 +224,21 @@
                         >Jadwal Konseling</span
                       >
                     </div>
-                    <input
-                      id="name"
-                      type="date"
-                      class="form-control"
-                      name="name"
-                      required
-                    />
+                    <div class="w-100">
+                      <input
+                        id="name"
+                        type="date"
+                        class="form-control"
+                        name="name"
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- button booking -->
-
             <a
               href="/pages/payment.html"
               type="submit"
@@ -245,7 +254,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <div class="row footer d-flex justify-content-center p-5 gap-2">
+      <div class="row footer d-flex justify-content-center py-5 gap-2">
         <div class="col-sm d-flex">
           <div>
             <img
@@ -298,5 +307,10 @@
       </div>
     </footer>
     <!-- AKHIR FOOTER -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
