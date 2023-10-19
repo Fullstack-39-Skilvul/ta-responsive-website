@@ -12,11 +12,6 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
 
     <!-- js -->
     <script type="text/javascript" src="/js/landing-page.js" defer></script>
@@ -26,7 +21,7 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#home">
             <img src="/assets/img/Manahsucita.png" alt="logo" width="200px" />
           </a>
           <button
@@ -49,14 +44,50 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Jenis Konseling</a>
+                <a class="nav-link" href="/pages/konselor.html"
+                  >Jenis Konseling</a
+                >
               </li>
             </ul>
-            <form class="d-flex gap-3" role="search">
+
+            <!-- AVATAR LOGIN -->
+            <div class="d-flex align-items-center">
+              <div
+                id="user-info"
+                class="d-none d-flex align-items-center gap-2"
+              >
+                <div>
+                  <img
+                    id="user-avatar"
+                    class="avatar"
+                    src=""
+                    alt="User Avatar"
+                    class="me-2"
+                    width="40px"
+                  />
+                </div>
+                <div class="d-flex flex-column justify-content-right">
+                  <span id="user-name"></span>
+                  <a
+                    class="text-decoration-none"
+                    href="/pages/login.html"
+                    id="logout-btn"
+                    >Logout</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- AVATAR LOGIN -->
+
+            <form id="login-btn" class="d-flex gap-3" role="search">
               <a href="#" class="btn btn-primary" type="submit"> Sign Up </a>
-              <button href="#" class="btn btn-outline-primary" type="submit">
+              <a
+                href="/pages/login.html"
+                class="btn btn-outline-primary"
+                type="submit"
+              >
                 Login
-              </button>
+              </a>
             </form>
           </div>
         </div>
@@ -67,7 +98,10 @@
     <!-- MAIN -->
     <main>
       <!-- HERO SECTION -->
-      <section class="container ps-4 hero d-flex justify-content-center">
+      <section
+        id="home"
+        class="container ps-4 hero d-flex justify-content-center"
+      >
         <div class="row">
           <div class="col-lg-6 text-hero mb-5">
             <h1>Perjalanan Kesehatan Mental Anda Dimulai Di Sini</h1>
@@ -76,7 +110,9 @@
               hubungi kami untuk mendapatkan panduan dan dukungan yang Anda
               butuhkan.
             </p>
-            <a class="btn bg-primary text-wrap text-light mt-5" href=""
+            <a
+              class="btn bg-primary btn-hover text-wrap text-light mt-5"
+              href="#konseling"
               >Get Started
               <img src="/assets/img/TrendUp.svg" alt="TrendUp" width="20px"
             /></a>
@@ -177,7 +213,7 @@
       <!-- AKHIR ABOUT SECTION -->
 
       <!-- TRY CONSULING SECTION -->
-      <section>
+      <section id="konseling">
         <div class="container mt-5 try-consuling-section">
           <div
             class="row bg-blue-sky p-3 m-2 d-flex align-items-center justify-content-center"
@@ -213,8 +249,10 @@
                 kesejahteraan yang lebih besar. Temukan cahaya di sini, di
                 Mahasucita.
               </p>
-              <a class="btn bg-primary text-wrap text-light mt-2 fs-6" href=""
-                >Try Consuling
+              <a
+                class="btn btn-hover bg-primary text-wrap text-light mt-2 fs-6"
+                href="/pages/konselor.html"
+                >Try Counseling
                 <img src="/assets/img/TrendUp.svg" alt="TrendUp" width="20px"
               /></a>
             </div>
@@ -346,7 +384,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <div class="row footer d-flex justify-content-center p-5 gap-2">
+      <div class="row footer d-flex justify-content-center py-5 gap-2">
         <div class="col-sm d-flex">
           <div>
             <img
@@ -399,5 +437,10 @@
       </div>
     </footer>
     <!-- AKHIR FOOTER -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
