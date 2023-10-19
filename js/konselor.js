@@ -1,5 +1,23 @@
 let slideContent = document.getElementById("slider-content");
 
+const konselor = JSON.parse(localStorage.getItem("konselor"));
+let namaKonselor = document.getElementById("name");
+let spesialisKonselor = document.getElementById("jenis");
+if (konselor) {
+  namaKonselor.value = konselor.name;
+  spesialisKonselor.value = konselor.spesialis;
+}
+
+function kirimKonselor(data) {
+  console.log(data);
+  localStorage.setItem("konselor", JSON.stringify(data));
+  const konselor = JSON.parse(localStorage.getItem("konselor"));
+  if (konselor) {
+    namaKonselor.value = konselor.name;
+    spesialisKonselor.value = konselor.spesialis;
+  }
+}
+
 async function getDataKonselor() {
   try {
     let response = await fetch(
@@ -13,13 +31,16 @@ async function getDataKonselor() {
     }
 
     console.log(konselor);
-    konselor.forEach((item) => {
+    konselor.map((item) => {
       const card = `
         <div class="card-konselor">
-          <img src="${item.avatar}" class="card-img-top" alt="..." stylye={width:900px}>
-          <div class="card-body">
-            <h5 class="card-title fs-6">${item.name}</h5>
-            <p class="card-text">${item.spesialis}</p>
+        <img src="${item.avatar}" class="card-img-top" alt="..." />
+          <div class="card-body" >
+              <h5 class="card-title text-truncate" id="name">${item.name}</h5>
+              <p class="card-text" id="spesialis">${item.spesialis}</p>
+              <button class="card-btn" onclick='kirimKonselor(${JSON.stringify(
+                item
+              )})'>Booking Now</button>
           </div>
         </div>
       `;

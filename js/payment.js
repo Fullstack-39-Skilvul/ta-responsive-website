@@ -1,36 +1,31 @@
-let slideContent = document.getElementById("slider-content");
+// cek user
+let user = localStorage.getItem("user");
+user = JSON.parse(user);
 
-async function getDataKonselor() {
-  try {
-    let response = await fetch(
-      "https://6525469867cfb1e59ce6ff49.mockapi.io/konselor"
-    );
-    let konselor = await response.json();
+console.log(user);
 
-    if (!konselor || !Array.isArray(konselor)) {
-      console.error("Data konselor tidak valid atau tidak ada.");
-      return;
-    }
-
-    console.log(konselor);
-    konselor.forEach((item) => {
-      const card = `
-        <div class="card-konselor">
-          <img src="${item.avatar}" class="card-img-top" alt="..." stylye={width:900px}>
-          <div class="card-body">
-            <h5 class="card-title fs-6">${item.name}</h5>
-            <p class="card-text">${item.spesialis}</p>
-          </div>
-        </div>
-      `;
-      slideContent.innerHTML += card;
-    });
-  } catch (error) {
-    console.error("Terjadi kesalahan:", error);
-  }
+if (!user) {
+  window.location.href = "login.html";
 }
 
-getDataKonselor();
+function sukses() {
+  Swal.fire(
+    "Pembayaran Berhasil",
+    "Terima kasih telah melakukan pembayaran",
+    "success"
+  );
+  Swal.fire({
+    title: "Pembayaran Berhasil",
+    text: "Terima kasih telah melakukan pembayaran",
+    icon: "success",
+    confirmButtonText: "Ok",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "../index.html";
+    }
+  });
+  // window.location.href = './index.html'
+}
 
 const login = () => {
   const isLogin = localStorage.getItem("login") === "true";
