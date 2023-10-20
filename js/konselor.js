@@ -86,3 +86,13 @@ logoutButton.addEventListener("click", function (event) {
   const loginButton = document.getElementById("loggin-btn");
   loginButton.classList.remove("d-none");
 });
+
+function handleBooking() {
+  const isLogin = localStorage.getItem("Login") === "true";
+
+  if (isLogin) {
+    window.location.href = "/pages/login.html";
+  }
+}
+const bookingBtn = document.getElementById("booking");
+bookingBtn.addEventListener("click", handleBooking());
